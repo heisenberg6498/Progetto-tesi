@@ -1,0 +1,82 @@
+# ==========================================
+# Python & Virtual Environments
+# ==========================================
+.env
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# ==========================================
+# Data Science & Machine Learning (Keras/TF/Models)
+# ==========================================
+# Model checkpoints & saved weights
+*.h5
+*.hdf5
+*.keras
+*.ckpt
+*.pb
+*.pt
+*.pth
+*.pkl
+*.pickle
+*.joblib
+
+# Logs & TensorBoard output
+logs/
+tensorboard/
+checkpoints/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# ==========================================
+# IDEs & OS Files
+# ==========================================
+# VS Code / JetBrains PyCharm
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# Operating System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
