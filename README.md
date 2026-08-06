@@ -10,7 +10,7 @@ The core objective is to analyze the daily temporal frame of the Nasdaq100 index
 * `/data`: Contains raw and processed CSV datasets extracted via reliable financial APIs.
 * `/scripts`: Python scripts for data preprocessing, exploratory data analysis (EDA), and model training.
 * `/models`: Saved weights and configurations of the trained LSTM networks and GARCH parameters.
-* `/results`: Output metrics including RMSE, MAE, MAPE, and R-squared evaluations.
+* `/results`: Output metrics including RMSE, MAE, and R-squared evaluations.
 
 ## Execution
 This environment is managed utilizing autonomous AI coding agents. Please refer to `agents.md` and `product.md` for strict agent directives and systemic workflows.

@@ -1,2 +1,7 @@
 yfinance
 pandas
+matplotlib
+scikit-learn
+arch
+numpy
+tensorflow

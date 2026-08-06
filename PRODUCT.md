@@ -27,5 +27,5 @@ Based on established empirical literature for financial time series, the neural 
 *   **Output Layer**: Exactly ONE (1) Dense layer emitting a single continuous linear value (the point-forecast of the volatility).
 
 ## 3. Training & Validation Protocol
-*   **Loss Function & Optimization**: Employ Mean Squared Error (MSE) as the primary loss function, utilizing the Adam optimizer. Monitor the Mean Absolute Percentage Error (MAPE) during validation.
+*   **Loss Function & Optimization**: Employ Mean Squared Error (MSE) as the primary loss function, utilizing the Adam optimizer. Monitor the Mean Absolute Error (MAE) during validation.
 *   **Cross-Validation**: Implement a strict Walk-Forward Validation scheme. Random train-test splits are absolutely forbidden due to the temporal dependencies inherent in the index data. Data scaling (e.g., MinMaxScaler) must be computed solely on the training fold to prevent data leakage into the out-of-sample test sets.

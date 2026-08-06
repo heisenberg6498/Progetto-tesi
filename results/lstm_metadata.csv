@@ -1,0 +1,2 @@
+Model,Lookback,LSTM_Units,Dropout,Loss,Optimizer,Batch_Size,Best_Epoch,Features,Scale_Factor,Mu_Proxy_Final,Train_Observations,Validation_Observations,Test_Observations,Seed
+LSTM,60,32,0.2,QLIKE,Adam,32,3,"Scaled_Return, Squared_Residual_Proxy",100.0,0.0006138901121608851,1935,414,416,42

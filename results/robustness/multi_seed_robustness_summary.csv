@@ -1,0 +1,5 @@
+Model,Proxy,QLIKE,MSE_var,MAE_var,RMSE_vol,R2_OOS_HistoricalMean
+LSTM_Standalone,Squared_Residual,-7.8455 ± 0.0155,4.77e-07 ± 4.36e-09,1.99e-04 ± 1.64e-06,0.0101 ± 0.0000,5.26% ± 0.87%
+LSTM_Standalone,Parkinson_Var,-8.3046 ± 0.0139,9.55e-08 ± 1.47e-09,1.19e-04 ± 3.45e-06,0.0065 ± 0.0001,10.50% ± 1.38%
+Hybrid_GARCH_LSTM,Squared_Residual,-7.8591 ± 0.0146,4.73e-07 ± 4.73e-09,2.01e-04 ± 3.14e-06,0.0101 ± 0.0001,6.12% ± 0.94%
+Hybrid_GARCH_LSTM,Parkinson_Var,-8.3058 ± 0.0177,9.38e-08 ± 2.11e-09,1.23e-04 ± 5.53e-06,0.0065 ± 0.0002,12.12% ± 1.98%
