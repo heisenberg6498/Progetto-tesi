@@ -1,0 +1,3 @@
+Modello,Distanza Media (MAE %),Mediana Errore Assoluto (%),RMSE (%),Bias Medio (%),Deviazione Standard Errore (%),Max Sottostima (%),Max Sovrastima (%)
+"GARCH(1,1)",0.778%,0.671%,1.067%,-0.350%,1.008%,8.41%,-3.98%
+LSTM,0.744%,0.677%,1.017%,-0.266%,0.982%,9.49%,-1.79%
