@@ -314,7 +314,7 @@ def run_lstm_pipeline(data_path="data/ndx_processed_data.csv", output_dir="resul
         "Train_Observations": len(train_df_original),
         "Validation_Observations": len(val_df_original),
         "Test_Observations": len(test_df_original),
-        "Seed": 42
+        "Seed": seed
     }])
     metadata_df.to_csv(os.path.join(output_dir, "lstm_metadata.csv"), index=False)
     

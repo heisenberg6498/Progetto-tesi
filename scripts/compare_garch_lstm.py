@@ -58,27 +58,27 @@ def compare_models(results_dir="results"):
                                 on='Date', how='inner')
                                 
         dates = merged_preds['Date']
-        realized = merged_preds['Squared_Residual_Proxy']
-        garch_var = merged_preds['GARCH_Forecast_Var']
-        lstm_var = merged_preds['LSTM_Forecast_Var']
+        realized_vol = np.sqrt(np.maximum(merged_preds['Squared_Residual_Proxy'], 0))
+        garch_vol = np.sqrt(np.maximum(merged_preds['GARCH_Forecast_Var'], 0))
+        lstm_vol = np.sqrt(np.maximum(merged_preds['LSTM_Forecast_Var'], 0))
         
         plt.figure(figsize=(15, 8))
         
         # Subplot 1: GARCH
         plt.subplot(2, 1, 1)
-        plt.plot(dates, realized, color='lightgray', label='Proxy Realizzata (Residuo Quadratico)', alpha=0.6)
-        plt.plot(dates, garch_var, color='midnightblue', linewidth=1.5, label='Previsione GARCH(1,1)')
-        plt.title('GARCH(1,1) - Previsione Out-of-Sample', fontweight='bold')
-        plt.ylabel('Varianza Decimale')
+        plt.plot(dates, realized_vol, color='lightgray', label='Proxy Volatilità Osservata (|r_t - μ|)', alpha=0.6)
+        plt.plot(dates, garch_vol, color='midnightblue', linewidth=1.5, label='Previsione Volatilità GARCH(1,1)')
+        plt.title('GARCH(1,1) - Previsione Out-of-Sample della Volatilità', fontweight='bold')
+        plt.ylabel('Volatilità Giornaliera (σ_t)')
         plt.legend(loc='upper right')
         plt.grid(True, linestyle='--', alpha=0.5)
         
         # Subplot 2: LSTM
         plt.subplot(2, 1, 2)
-        plt.plot(dates, realized, color='lightgray', label='Proxy Realizzata (Residuo Quadratico)', alpha=0.6)
-        plt.plot(dates, lstm_var, color='darkred', linewidth=1.5, label='Previsione LSTM')
-        plt.title('LSTM - Previsione Out-of-Sample', fontweight='bold')
-        plt.ylabel('Varianza Decimale')
+        plt.plot(dates, realized_vol, color='lightgray', label='Proxy Volatilità Osservata (|r_t - μ|)', alpha=0.6)
+        plt.plot(dates, lstm_vol, color='darkred', linewidth=1.5, label='Previsione Volatilità LSTM')
+        plt.title('LSTM - Previsione Out-of-Sample della Volatilità', fontweight='bold')
+        plt.ylabel('Volatilità Giornaliera (σ_t)')
         plt.xlabel('Data')
         plt.legend(loc='upper right')
         plt.grid(True, linestyle='--', alpha=0.5)
